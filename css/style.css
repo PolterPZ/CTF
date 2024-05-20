@@ -1,6 +1,7 @@
 /* //////////////////////////////////////// ОБНУЛЕННЯ /////////////////////////////////////////////// */
 @import url("reset.css");
 @import url("templates.css");
+@import url("cube-anime.css");
 html {
     scroll-behavior: smooth;
 }
