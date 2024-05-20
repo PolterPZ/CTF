@@ -1,0 +1,247 @@
+/* //////////////////////////////////////// ОБНУЛЕННЯ /////////////////////////////////////////////// */
+@import url("reset.css");
+@import url("templates.css");
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #0000004c;
+    box-shadow: inset 10px 10px 300px #a43737, inset 10px 10px 200px #030101;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #462e2e;
+    box-shadow: inset 10px 10px 300px #302828, inset 10px 10px 200px #030101;
+    z-index: 50;
+    /* display: none; */
+    perspective: 2000px;
+    animation: hide 1s ease forwards;
+    animation-delay: 2.3s;
+}
+.overlay .cube:nth-of-type(1){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    transform: translateZ(1000px);
+    rotate: z 35deg;
+    animation: cube-overlay 1.6s ease forwards, cube-floating 3s infinite ease-in-out;
+    animation-delay: 0s, 1.7s;
+    transition: all 1s ease;
+}
+.overlay .cube:nth-of-type(2){
+     position: absolute;
+    top: 10%;
+    left: 10%;
+    transform-style: preserve-3d;
+    transform: translateZ(1000px);
+    animation: cube-overlay 2.2s ease forwards, cube-floating 3s infinite ease-in-out;
+    animation-delay: 0s, 2.3s;
+    transition: all 1s ease;
+}
+.overlay .cube:nth-of-type(3){
+    position: absolute;
+    top: 10%;
+    left: 70%;
+    transform-style: preserve-3d;
+    transform: translateZ(1000px);
+    animation: cube-overlay 2s ease forwards, cube-floating 3s infinite ease-in-out;
+    animation-delay: 0s, 2.1s;
+    transition: all 1s ease;
+}
+
+
+.overlay .title{
+   font-size: 100px;
+   color: #a43737;
+   
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   display: flex;
+   justify-content: center;
+   margin-top: 300px;
+   text-shadow: 10px 10px #261a1a, 0 0 100px #ff3c3c, 15px 15px #261a1a;
+}
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+   
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    perspective: 2000px;
+    border: 25px solid #4e464a;
+    border-bottom: none;
+}
+
+#about-me{
+    width: 100%;
+    height: 100vh;
+     box-shadow: inset 10px 10px 300px #a43737, inset 10px 10px 200px #030101;
+     padding: 20px;
+     border-inline: 25px solid #4e464a;
+     
+}
+
+.about-me {
+}
+.about-me__title {
+    text-align: center;
+    font-size: 65px;
+    padding: 20px;
+    animation: shadow-glitch 0.1s infinite;
+    
+}
+.about-me__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+}
+.about-me__block {
+    border: 3px solid #a43737;
+    flex-basis: 600px;
+    padding: 20px;
+    box-shadow: inset 10px 10px 300px #a43737, inset 10px 10px 200px #ffffff,  
+    10px 10px 10px #301111, 20px 20px 3px #c55d5d;
+    
+}
+.about-me__block:nth-of-type(1){
+    animation: about-floating 3s infinite ease-in-out;
+    animation-delay: 0.2s;
+    transform-style: preserve-3d;
+}
+.about-me__block:nth-of-type(2){
+    animation: about-floating 3s infinite ease-in-out;
+}
+.about-me__block:nth-of-type(3){
+    animation: about-floating 3s infinite ease-in-out;
+    animation-delay: 0.5s;
+}
+
+.about-me__link{
+    max-width: 300px;
+ 
+    
+    margin: 0 auto;
+    margin-top: 140px;
+    font-size: 30px;
+    color: #301111;
+}
+.about-me__link:hover{
+    animation: glitch 0.1s 3 linear;
+}
+.technologies{
+    padding: 20px;
+    box-shadow: inset 10px 10px 300px #a43737, inset 10px 10px 200px #030101;
+    border-inline: 25px solid #4e464a;
+}
+.technologies__title {
+    text-align: center;
+    font-size: 65px;
+    padding: 20px;
+    animation: shadow-glitch 0.1s infinite;
+    animation-delay: 0.4s;
+}
+.technologies__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.technologies__block {
+    border: 3px solid #a43737;
+    flex-basis: 600px;
+    padding: 20px;
+    box-shadow: inset 10px 10px 300px #a43737, inset 10px 10px 200px #ffffff,  10px 10px 10px #301111;
+     animation: about-floating 3s infinite ease-in-out;
+     animation-delay: 0.5s;
+}
+.technologies__block:nth-child(1){
+    border: 3px solid #05131e;
+    box-shadow: inset 10px 10px 300px #2552d7, inset 10px 10px 200px #ffffff,  10px 10px 10px #301111;
+    animation-delay: 0.2s;
+}
+.technologies__block:nth-child(2){
+    border: 3px solid #b1c545;
+    box-shadow: inset 10px 10px 300px #5f6b33, inset 10px 10px 200px #ffffff,  10px 10px 10px #301111;
+    animation-delay: 0.4s;
+}
+.technologies__block:nth-child(3){
+    border: 3px solid #b245c5;
+    box-shadow: inset 10px 10px 300px #785784, inset 10px 10px 200px #ffffff,  10px 10px 10px #301111;
+}
+.technologies__block:nth-child(4){
+    border: 3px solid #1d1c1e;
+    box-shadow: inset 10px 10px 300px #332f35, inset 10px 10px 200px #ffffff,  10px 10px 10px #301111;
+    animation-delay: 0.2s;
+}
+.technologies__link{
+    display: flex;
+    justify-content: center;
+    margin-top: 140px;
+    font-size: 30px;
+    color: #301111;
+    border: 4px solid #301111;
+}
+.technologies__link:hover{
+    animation: glitch 0.1s 3 linear;
+}
+
+
+
+.faq {
+    padding: 20px;
+    box-shadow: inset 10px 10px 300px #a43737, inset 10px 10px 200px #030101;
+    border-inline: 25px solid #4e464a;;
+}
+.faq__title {
+    text-align: center;
+    font-size: 65px;
+    padding: 20px;
+    animation: shadow-glitch 0.1s infinite;
+    animation-delay: 0.3s;
+}
+.faq__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.faq__block {
+    border: 3px solid #a43737;
+    flex-basis: 600px;
+    padding: 20px;
+    box-shadow: inset 10px 10px 300px #a43737, inset 10px 10px 200px #ffffff,  10px 10px 10px #301111;
+    animation: about-floating 3s infinite ease-in-out;
+    animation-delay: 0.5s;
+}
+.faq__block:nth-of-type(even){
+    animation-delay: 0.2s;
+}
+.faq__block:nth-of-type(odd){
+    animation-delay: 0.5s;
+}
+.faq__link{
+    display: flex;
+    justify-content: center;
+    margin-top: 140px;
+    font-size: 30px;
+    color: #301111;
+}
+.faq__link:hover{
+    animation: glitch 0.1s 3 linear;
+}
+.block__title{
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
